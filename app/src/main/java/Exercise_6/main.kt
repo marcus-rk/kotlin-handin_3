@@ -1,9 +1,6 @@
 package Exercise_6
 
-import Exercise_6.Products.ClothingProduct
-import Exercise_6.Products.FoodProduct
-import Exercise_6.Products.Product
-import Exercise_6.Products.ClothingSize
+import Exercise_6.Products.*
 
 fun main() {
     // Creating instances of ClothingProduct, FoodProduct, and ProductInventory
