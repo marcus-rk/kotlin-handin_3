@@ -12,6 +12,10 @@ class RedditFrontPage (
             redditPosts.removeAt(postIndex)
     }
 
+    fun getIndexByRedditPost(redditPost: RedditPost) : Int {
+        return redditPosts.indexOf(redditPost)
+    }
+
     fun sortPostsByVoteBalanceDescending() {
         redditPosts.sortByDescending { it.voteBalance }
     }

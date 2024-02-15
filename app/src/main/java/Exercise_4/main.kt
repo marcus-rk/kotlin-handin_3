@@ -27,9 +27,10 @@ fun main() {
     redditFrontPage.sortPostsByVoteBalanceDescending()
     redditFrontPage.displayPosts()
 
-    // Removing RedditPost by index
+    // Removing redditPost2 by index
     println("\nPosts AFTER deleting redditPost2 by index")
-    redditFrontPage.deletePostByIndex(1) // removed redditPost2 by index
+    val indexToDelete = redditFrontPage.getIndexByRedditPost(redditPost2)
+    redditFrontPage.deletePostByIndex(indexToDelete)
     redditFrontPage.displayPosts()
 
     // Adding RedditPost (redditPost2)
