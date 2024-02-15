@@ -1,18 +1,23 @@
 package Exercise_2
 
 class Sandwich (
-    override val price: Double,
-    override val quantity: Int,
-    val isMenu: Boolean
+    override val ingredients: MutableList<String>,
+    private val price: Double
 ) : FastFood {
     override fun calculatePrice(): Double {
-        if (isMenu == true) {
-            return price * quantity + 30
-        }
-        return price * quantity
+        return price
+    }
+
+    override fun addIngredient(ingredient: String) {
+        ingredients.add(ingredient)
+    }
+
+    override fun removeIngredient(ingredient: String) {
+        ingredients.remove(ingredient)
     }
 
     override fun toString(): String {
-        return "Sandwich(price=$price, quantity=$quantity)"
+        return "Sandwich(ingredients=$ingredients, price=$price)"
     }
+
 }

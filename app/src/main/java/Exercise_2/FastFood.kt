@@ -1,7 +1,8 @@
 package Exercise_2
 
 interface FastFood {
-    val price: Double
-    val quantity: Int
+    val ingredients: MutableList<String>
     fun calculatePrice() : Double
+    fun addIngredient(ingredient: String)
+    fun removeIngredient(ingredient: String)
 }
