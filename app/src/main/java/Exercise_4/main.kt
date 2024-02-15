@@ -9,10 +9,10 @@ fun main() {
     // Store the instances in a list of RedditPosts
     val redditPosts: MutableList<RedditPost> = mutableListOf(redditPost1, redditPost2, redditPost3)
 
-    // Creating RedditFrontPage instance from list of RedditPosts
+    // Creating RedditFrontPage instance with list of RedditPosts
     val redditFrontPage: RedditFrontPage = RedditFrontPage(redditPosts)
 
-    // Print the list of RedditPosts with displauPosts() before changes
+    // Print the list of RedditPosts with displayPosts() before changes
     println("Posts BEFORE getting voted and sorted")
     redditFrontPage.displayPosts()
 
@@ -29,7 +29,7 @@ fun main() {
 
     // Removing RedditPost by index
     println("\nPosts AFTER deleting redditPost2 by index")
-    redditFrontPage.deletePostByIndex(1) // remove redditPost2 by index
+    redditFrontPage.deletePostByIndex(1) // removed redditPost2 by index
     redditFrontPage.displayPosts()
 
     // Adding RedditPost (redditPost2)
