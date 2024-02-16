@@ -3,7 +3,11 @@ package Exercise_2
 class Pizza (
     override val ingredients: MutableList<String> = mutableListOf(),
     private val size: Size,
-    private val pricesMap: Map<Size,Double> = mapOf(Size.SMALL to 60.0, Size.MEDIUM to 70.0, Size.LARGE to 85.0)
+    private val pricesMap: HashMap<Size,Double> = hashMapOf(
+        Size.SMALL to 60.0,
+        Size.MEDIUM to 70.0,
+        Size.LARGE to 85.0
+    )
 ) : FastFood {
     override fun calculatePrice(): Double {
         return pricesMap.getValue(size)
