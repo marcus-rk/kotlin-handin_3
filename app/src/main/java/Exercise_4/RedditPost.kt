@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter
 class RedditPost (
     private val author: String,
     private val title: String,
-) {
+) : Comparable<RedditPost> {
     private val date: String = getDateTime()
     private var upvotes: Int = 1
     private var downvotes: Int = 0
@@ -20,6 +20,11 @@ class RedditPost (
 
     fun downvote() {
         this.downvotes++
+    }
+
+    // Override from Comparable interface
+    override fun compareTo(other: RedditPost): Int {
+        return this.voteBalance - other.voteBalance
     }
 
     @SuppressLint("NewApi") // Needed because of Android Studio

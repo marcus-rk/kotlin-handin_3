@@ -22,19 +22,20 @@ fun main() {
     redditPost2.upvote()
     redditPost1.downvote()
 
-    // Sort RedditPosts by vote balance using sortPostsByVoteBalanceDescending() and displays them
+    // Sort RedditPosts by vote balance using sortDescending and displays them
     println("\nPosts AFTER getting voted and sorted")
-    redditFrontPage.sortPostsByVoteBalanceDescending()
+    redditFrontPage.redditPosts.sortDescending()
     redditFrontPage.displayPosts()
 
     // Removing redditPost2 by index
     println("\nPosts AFTER deleting redditPost2 by index")
-    val indexToDelete = redditFrontPage.getIndexByRedditPost(redditPost2)
+    val indexToDelete = redditFrontPage.getIndexOfRedditPost(redditPost2)
     redditFrontPage.deletePostByIndex(indexToDelete)
     redditFrontPage.displayPosts()
 
-    // Adding RedditPost (redditPost2)
+    // Adding RedditPost (redditPost2) and sorting
     println("\nAFTER adding redditPost2 again")
     redditFrontPage.addPost(redditPost2)
+    redditFrontPage.redditPosts.sort()
     redditFrontPage.displayPosts()
 }

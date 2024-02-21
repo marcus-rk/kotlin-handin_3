@@ -1,7 +1,7 @@
 package Exercise_4
 
 class RedditFrontPage (
-    private val redditPosts: MutableList<RedditPost> = mutableListOf()
+    val redditPosts: MutableList<RedditPost> = mutableListOf()
 ) {
     fun addPost(post: RedditPost) {
         redditPosts.add(post)
@@ -12,12 +12,8 @@ class RedditFrontPage (
             redditPosts.removeAt(postIndex)
     }
 
-    fun getIndexByRedditPost(redditPost: RedditPost) : Int {
+    fun getIndexOfRedditPost(redditPost: RedditPost) : Int {
         return redditPosts.indexOf(redditPost)
-    }
-
-    fun sortPostsByVoteBalanceDescending() {
-        redditPosts.sortByDescending { it.voteBalance }
     }
 
     fun displayPosts () {
