@@ -9,7 +9,7 @@ fun main() {
     val article5: Article = Article("David Brown", "The Importance of Cybersecurity in the Digital Age")
 
     // Store the instances in a Article list
-    val articles: List<Article> = listOf(article1, article2, article3, article4, article5)
+    val articles: List<Article> = arrayListOf(article1, article2, article3, article4, article5)
 
     // Println all article instances from Article List
     articles.forEach { println(it) }
