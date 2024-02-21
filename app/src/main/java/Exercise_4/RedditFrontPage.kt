@@ -1,7 +1,7 @@
 package Exercise_4
 
 class RedditFrontPage (
-    val redditPosts: MutableList<RedditPost> = mutableListOf()
+    val redditPosts: ArrayList<RedditPost> = arrayListOf()
 ) {
     fun addPost(post: RedditPost) {
         redditPosts.add(post)

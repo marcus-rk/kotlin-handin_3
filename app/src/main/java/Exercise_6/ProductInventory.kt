@@ -3,15 +3,16 @@ package Exercise_6
 import Exercise_6.Products.Product
 
 class ProductInventory (
-    private val inventory: MutableMap<Product, Int> = mutableMapOf()
+    private val inventory: HashMap<Product, Int> = hashMapOf() // Could also use productID as key
 ) {
+
     fun addProduct(product: Product) {
-        val currentValue = inventory.getOrDefault(product, 0)
+        val currentValue: Int = inventory.getOrDefault(product, 0)
         inventory[product] = currentValue + 1
     }
 
     fun removeProduct(product: Product) {
-        val currentValue = inventory.getOrDefault(product, 0)
+        val currentValue: Int = inventory.getOrDefault(product, 1)
         inventory[product] = currentValue - 1
     }
 
@@ -25,7 +26,7 @@ class ProductInventory (
     }
 
     private fun calculateInventoryValue() : Double {
-        var totalValue = 0.0
+        var totalValue: Double = 0.0
 
         inventory.forEach { (product, quantity) ->
             totalValue += product.price * quantity

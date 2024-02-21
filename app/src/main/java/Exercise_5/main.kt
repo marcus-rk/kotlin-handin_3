@@ -2,7 +2,7 @@ package Exercise_5
 
 fun main() {
     val words: List<String> = arrayListOf("apple", "banana", "apple", "orange", "banana", "apple", "orange", "banana", "apple","banana", "apple", "orange", "banana","banana", "apple", "orange", "apple", "orange", "banana")
-    val frequencyMap: HashMap<String, Int> = HashMap()
+    val frequencyMap: HashMap<String, Int> = hashMapOf()
 
     // if a key exist in map, return the current value
     // if a key does not exist, add it to map and set value to default 0
@@ -13,5 +13,5 @@ fun main() {
     }
 
     // Print frequency map (sorted)
-    frequencyMap.toSortedMap().forEach { (word, count) -> println("$word, count: $count") }
+    frequencyMap.toSortedMap().forEach{ (word, count) -> println("$word, count: $count") }
 }

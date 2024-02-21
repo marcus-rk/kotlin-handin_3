@@ -7,7 +7,7 @@ fun main() {
     val redditPost3: RedditPost = RedditPost("Maybe_John_doe", "Third Reddit Post")
 
     // Store the instances in a list of RedditPosts
-    val redditPosts: MutableList<RedditPost> = mutableListOf(redditPost1, redditPost2, redditPost3)
+    val redditPosts: ArrayList<RedditPost> = arrayListOf(redditPost1, redditPost2, redditPost3)
 
     // Creating RedditFrontPage instance with list of RedditPosts
     val redditFrontPage: RedditFrontPage = RedditFrontPage(redditPosts)
@@ -29,7 +29,7 @@ fun main() {
 
     // Removing redditPost2 by index
     println("\nPosts AFTER deleting redditPost2 by index")
-    val indexToDelete = redditFrontPage.getIndexOfRedditPost(redditPost2)
+    val indexToDelete: Int = redditFrontPage.getIndexOfRedditPost(redditPost2)
     redditFrontPage.deletePostByIndex(indexToDelete)
     redditFrontPage.displayPosts()
 

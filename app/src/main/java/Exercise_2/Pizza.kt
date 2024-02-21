@@ -1,7 +1,7 @@
 package Exercise_2
 
-class Pizza (
-    override val ingredients: MutableList<String> = mutableListOf(),
+class Pizza(
+    override val ingredients: MutableList<String>,
     private val size: Size, // --> see Size enum
 ) : FastFood {
 

@@ -6,6 +6,7 @@ class Burger (
     private val isMenu: Boolean,
     private val menuExtraCost: Double = 20.0
 ) : FastFood {
+
     override fun calculatePrice(): Double {
         return if (isMenu) price + menuExtraCost else price
     }
