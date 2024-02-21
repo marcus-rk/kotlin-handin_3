@@ -1,6 +1,6 @@
 package Exercise_1
 
-class Article (
+data class Article (
     val author: String,
     val title: String
 ) {
